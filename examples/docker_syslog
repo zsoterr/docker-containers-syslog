@@ -1,0 +1,12 @@
+/var/log/docker/*.log
+/var/log/docker/containers/*.log
+{
+  copytruncate
+  compress
+  dateext
+  size 10M
+  daily
+  dateformat -%Y%m%d%H%s
+  missingok
+  rotate 30
+}
